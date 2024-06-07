@@ -1,0 +1,19 @@
+
+.todo__icon{
+    display: block;
+    margin-right: 10px;
+}
+.icon_bin{} 
+.icon__container{
+    display: block;
+    width: 20px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+.icon__container:hover{
+    opacity: 1;
+}
+.icon__container img{
+    display: block;
+    width: 100%;
+}

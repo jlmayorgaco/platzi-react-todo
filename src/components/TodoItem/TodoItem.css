@@ -1,0 +1,101 @@
+.todo__item {
+  display: block;
+  width: 100%;
+  padding: 1em;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+
+  background-color: white;
+  border: 3px solid white;
+  border-radius: 10px;
+
+  margin-bottom: 1em;
+
+  cursor: grab;
+}
+.item__remove {
+  width: 20px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+.item__remove:hover {
+  opacity: 1;
+}
+.todo__item .item__check {
+}
+.todo__item .item__check input[type="checkbox"] {
+  display: none;
+}
+.todo__item .item__check label {
+  display: inline-block;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+
+  border: 2px solid var(--color-purple);
+  border-radius: 100%;
+}
+.todo__item .item__check label:before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background: url("https://ingjorgeluismayorga.github.io/platzi-react-todo/checked_1.png") no-repeat center center;
+  background-size: 10px 10px; 
+}
+.todo__item .item__check input[type=checkbox]:checked + label {
+    background-color: var(--color-purple);
+  }
+.todo__item .item__check input[type=checkbox]:checked + label:before {
+    background: url("https://ingjorgeluismayorga.github.io/platzi-react-todo/checked_2.png") no-repeat center center;
+    background-size: 10px 10px;
+  }
+
+
+  .todo__item .item__dots{
+    width: 20px;
+    margin-right: 10px;
+    opacity: 0.5;
+    
+  }
+/*
+.item__check  input[type="checkbox"]:before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: red;
+}
+.item__check  input[type="checkbox"]:checked:before {
+  background: green;
+}
+*/
+
+.todo__item .item__text {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 10px;
+  letter-spacing: 1px;
+
+  -webkit-order: 0;
+  order: 0;
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-align-self: auto;
+  align-self: auto;
+}
+
+.todo__item.status__completed {
+  opacity: 0.9;
+  background-color: rgba(187, 187, 187, 0.713);
+  border-color: rgba(187, 187, 187, 0.713);
+}
+.todo__item.status__completed .item__text {
+  color: rgb(132, 132, 132);
+  text-decoration: line-through;
+}

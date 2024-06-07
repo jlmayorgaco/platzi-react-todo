@@ -1,0 +1,46 @@
+.todo__list{
+    display: block;
+    width: 100%;
+}
+.list__items{
+    display: block;
+    width: 100%;
+    margin: 0px;
+    box-sizing: border-box;
+
+    list-style-type: none;
+    margin-block-start: 0em;
+    margin-block-end:  0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+
+    max-height: calc(100vh - 338px);
+    overflow-y: scroll;
+
+}
+
+.list__items::-webkit-scrollbar {
+    display: none;
+  }
+.list__controls{
+    display: block;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.list_controls__icon{
+    width: 25px;
+    opacity: 0.8;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.list_controls__icon:hover{
+opacity: 1;
+}
+.list_controls__text{
+    font-size: 18px;
+}
